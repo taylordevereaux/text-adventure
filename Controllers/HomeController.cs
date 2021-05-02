@@ -21,16 +21,10 @@ namespace text_adventure.Controllers
 
         public IActionResult Index()
         {
-            return View();
-        }
+            var story = new Story();
+            story.LoadStory();
 
-        public IActionResult Act(string actId)
-        {
-            // TODO : Load Act by ID.
-            var act = new Act();
-            act.LoadAct();
-
-            return View(act);
+            return View(story);
         }
 
         public IActionResult Privacy()

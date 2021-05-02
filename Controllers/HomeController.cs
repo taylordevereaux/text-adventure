@@ -21,6 +21,12 @@ namespace text_adventure.Controllers
 
         public IActionResult Index()
         {
+            return View();
+        }
+
+        public IActionResult Act(string actId)
+        {
+            // TODO : Load Act by ID.
             var act = new Act();
             act.LoadAct();
 

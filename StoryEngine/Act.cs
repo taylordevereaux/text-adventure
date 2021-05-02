@@ -5,7 +5,7 @@ namespace text_adventure.StoryEngine
     public class Act
     {
         public string ID { get; set; }
-        public List<Scene> Scenes { get; set; }
+        public List<Scene> Scenes { get; set; } = new List<Scene>();
 
         public void LoadAct()
         {

@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System;
 
 namespace text_adventure.StoryEngine
 {
@@ -12,9 +13,16 @@ namespace text_adventure.StoryEngine
             Scenes.Add(scene);
         }
 
-        public void GetSceneByID()
+        public Scene GetScene(string sceneID)
         {
-
+            for (int i = 0; i <= Scenes.Count; i++)
+            {
+                if (Scenes[i].ID == sceneID)
+                {
+                    return Scenes[i];
+                }
+            }
+            throw new ArgumentException("Scene not found");
         }
     }
 }

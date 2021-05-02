@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 
 namespace text_adventure.StoryEngine
@@ -60,9 +61,16 @@ namespace text_adventure.StoryEngine
             this.AddAct(act);
 
         }
-        public void GetAct(string ActID)
+        public Act GetAct(int actID)
         {
-            
+            for (int i = 0; i <= Acts.Count; i++)
+            {
+                if (Acts[i].ID == actID) 
+                {
+                    return Acts[i];
+                }
+            }
+            throw new ArgumentException("Act not found");
         }
         public void AddAct(Act act)
         {

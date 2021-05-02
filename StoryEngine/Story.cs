@@ -51,9 +51,20 @@ namespace text_adventure.StoryEngine
             scene.CanContinue = false;
             scene.CanGoBack = true;
             scene.BackID = "Act_1_3";
+            scene.AddDialogueOption("Hand the beggar a copper coin.", "Act_1_5a");
+            scene.AddDialogueOption("Hand the beggar a silver coin.", "Act_1_5b");
+            scene.AddDialogueOption("Decline and walk away.", "Act_1_5c");
+            scene.AddDialogueOption("Stab the beggar.", "Act_1_5d");
             act.AddScene(scene);
 
             //scene 5a
+            scene = new Scene();
+            scene.ID = "Act_1_5a";
+            scene.Text = "Hello stranger, would you be willing to spare a copper for a man down on luck?";
+            scene.CanContinue = false;
+            scene.CanGoBack = true;
+            scene.BackID = "Act_1_4";
+            act.AddScene(scene);
 
             this.AddAct(act);
 

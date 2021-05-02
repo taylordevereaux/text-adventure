@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+
 namespace text_adventure.StoryEngine
 {
     public class Scene
@@ -10,6 +12,16 @@ namespace text_adventure.StoryEngine
         public string BackID { get; set; }
 
         public int ActID { get; set; }
+
+        public List<DialogueOption> DialogueOptions { get; set; } = new List<DialogueOption>();
+
+        public void AddDialogueOption(string text, string destinationSceneID)
+        {
+            DialogueOption option = new DialogueOption();
+            option.Text = text;
+            option.DestinationSceneID = destinationSceneID;
+            DialogueOptions.Add(option);
+        }
 
     }
 }

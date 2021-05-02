@@ -6,10 +6,12 @@
     <title>@ViewData["Title"] - text_adventure</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
-        @* <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+        @* <nav class="navbar navbar-expand-sm navbar-toggleable-sm mb-3">
             <div class="container">
                 <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">text_adventure</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
@@ -30,9 +32,10 @@
         </nav> *@
     </header>
     <div class="ta-container">
-        <main role="main" class="pb-3">
+        <main role="main" class="pb-3 w-50">
             @RenderBody()
         </main>
+        @* <button class="align-self-end btn btn-outline-dark" asp-controller="Home" asp-action="">List Scenes</button> *@
     </div>
 @* 
     <footer class="border-top footer text-muted">

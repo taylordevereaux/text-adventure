@@ -13,21 +13,19 @@ namespace text_adventure.Controllers
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
+        private readonly Story _story;
 
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(ILogger<HomeController> logger, Story story)
         {
             _logger = logger;
+            _story = story;
         }
 
         public IActionResult Index()
         {
-            var story = new Story();
-            story.LoadStory();
-
-            return View(story);
+            return View(_story);
         }
-
-        public IActionResult Privacy()
+        public IActionResult Begin()
         {
             return View();
         }

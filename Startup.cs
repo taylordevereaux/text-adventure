@@ -26,6 +26,12 @@ namespace text_adventure
             services
                 .AddControllersWithViews()
                 .AddRazorRuntimeCompilation();
+
+                
+            var story = new StoryEngine.Story();
+            story.LoadStory();
+
+            services.AddSingleton(story);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

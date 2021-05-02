@@ -2,25 +2,17 @@
     ViewData["Title"] = "Home Page";
 }
 
-@model text_adventure.StoryEngine.Story;
+@model text_adventure.StoryEngine.Act;
 
-@* 
 <div class="ta-container">
     <div class="text-center">
-        <h1 class="display-4 text-fantasy ">Nightborn</h1>
+        <h1 class="display-4">Nightborn</h1>
         <p>Born with no shadow, you are not bound by the laws of light.</p>
-        <button class="btn btn-outline-dark text-fantasy" asp-action="Scene" asp-route-sceneId="Act_1_1">Begin</button>
     </div>
-</div> *@
+</div>
 
-<a asp-action="Begin" class="btn btn-outline-dark text-fantasy">Begin</a>
-
-
-@foreach (var act in Model.Acts)
-{
-    <h1>Act @act.ID</h1>
-    <hr>
-    @foreach(var scene in act.Scenes)
+<div>
+    @foreach (var scene in Model.Scenes)
     {
         <div class="scene">
             <h2>@scene.ID</h2>
@@ -34,6 +26,4 @@
             </ul>
         </div>
     }
-}
-
-
+</div>

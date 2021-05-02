@@ -9,6 +9,7 @@ namespace text_adventure.StoryEngine
         public string ContinueID { get; set; }
         public string BackID { get; set; }
 
-        public string ActID { get; set; }
+        public int ActID { get; set; }
+
     }
 }

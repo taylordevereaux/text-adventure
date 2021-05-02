@@ -2,7 +2,28 @@
     ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+@model text_adventure.StoryEngine.Act;
+
+<div class="ta-container">
+    <div class="text-center">
+        <h1 class="display-4">Nightborn</h1>
+        <p>Born with no shadow, you are not bound by the laws of light.</p>
+    </div>
+</div>
+
+<div>
+    @foreach (var scene in Model.Scenes)
+    {
+        <div class="scene">
+            <h2>@scene.ID</h2>
+            <p>@scene.Text</p>
+            <ul>
+                <li>Can Continue: @scene.CanContinue</li>
+                <li>Can Continue: @scene.ContinueID</li>
+                <li>Can Go Back: @scene.CanGoBack</li>
+                <li>Can Continue: @scene.BackID</li>
+                <li>Can Continue: @scene.ActID</li>
+            </ul>
+        </div>
+    }
 </div>

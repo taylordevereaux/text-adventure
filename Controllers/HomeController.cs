@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using text_adventure.Models;
+using text_adventure.StoryEngine;
 
 namespace text_adventure.Controllers
 {
@@ -20,7 +21,10 @@ namespace text_adventure.Controllers
 
         public IActionResult Index()
         {
-            return View();
+            var act = new Act();
+            act.LoadAct();
+
+            return View(act);
         }
 
         public IActionResult Privacy()

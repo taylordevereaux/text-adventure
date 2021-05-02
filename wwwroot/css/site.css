@@ -78,6 +78,7 @@ html {
   font-family: 'Open Sans', sans-serif;
   margin: 0;
   padding: 0;
+  color: white;
 }
 
 body {
@@ -88,9 +89,11 @@ body {
   font-family: 'Open Sans', sans-serif !important;
   margin: 0;
   padding: 0;
-
+/* 
   background: rgb(59,143,202);
-  background: linear-gradient(180deg, rgba(59,143,202,1) 0%, rgba(218,173,144,1) 40%, rgba(252,97,0,1) 80%, rgba(150,131,139,1) 98%, rgba(134,128,147,1) 100%) fixed;
+  background: linear-gradient(180deg, rgba(59,143,202,1) 0%, rgba(218,173,144,1) 40%, rgba(252,97,0,1) 80%, rgba(150,131,139,1) 98%, rgba(134,128,147,1) 100%) fixed; */
+  background: rgb(218,88,86);
+  background: linear-gradient(0deg, rgba(218,88,86,1) 0%, rgba(68,24,102,1) 19%, rgba(0,0,5,1) 100%) fixed;
 }
 
 .text-fantasy {

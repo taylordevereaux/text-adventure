@@ -5,16 +5,16 @@
 @model text_adventure.StoryEngine.Scene;
 
 <div class="text-center">
-    <p class="p-5 border border-dark rounded">@Model.Text</p>
+    <p class="p-5 border border-white rounded">@Model.Text</p>
     <div class="d-flex justify-content-between">
         @if (Model.CanGoBack)
         {
-            <a class="btn btn-outline-dark mr-auto" asp-action="Scene" asp-route-sceneId="@Model.BackID">Back</a>
+            <a class="btn btn-outline-light mr-auto" asp-action="Scene" asp-route-sceneId="@Model.BackID">Back</a>
         }
 
         @if (Model.CanContinue)
         {
-            <a class="btn btn-outline-dark ml-auto" asp-action="Scene" asp-route-sceneId="@Model.ContinueID">Continue</a>
+            <a class="btn btn-outline-light ml-auto" asp-action="Scene" asp-route-sceneId="@Model.ContinueID">Continue</a>
         }
     </div>
 </div>

@@ -24,11 +24,9 @@ namespace text_adventure.Controllers
         [Route("[controller]/{actId}")]
         public IActionResult Index(int actId)
         {   
-            // var act = _story.GetAct(actId);
+            var act = _story.GetAct(actId);
 
-            // var scene = act.GetFirstScene();
-            
-            var sceneId =_story.Acts.First().Scenes.First().ID;
+            var sceneId = act.Scenes.First().ID;
 
             return RedirectToAction(nameof(Scene), new {
                 actId = actId,

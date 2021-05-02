@@ -22,7 +22,6 @@ namespace text_adventure.StoryEngine
             scene.CanContinue = true;
             scene.CanGoBack = false;
             scene.ContinueID = "Act_1_2";
-            scene.ActID = "Act_1";
             act.AddScene(scene);
 
             //scene 2
@@ -33,7 +32,6 @@ namespace text_adventure.StoryEngine
             scene.CanGoBack = true;
             scene.ContinueID = "Act_1_3";
             scene.BackID = "Act_1_1";
-            scene.ActID = "Act_1";
             act.AddScene(scene);
 
             //scene 3
@@ -44,19 +42,18 @@ namespace text_adventure.StoryEngine
             scene.CanGoBack = true;
             scene.ContinueID = "Act_1_4";
             scene.BackID = "Act_1_2";
-            scene.ActID = "Act_1";
             act.AddScene(scene);
 
             //scene 4
             scene = new Scene();
             scene.ID = "Act_1_4";
             scene.Text = "Hello stranger, would you be willing to spare a copper for a man down on luck?";
-            scene.CanContinue = true;
+            scene.CanContinue = false;
             scene.CanGoBack = true;
-            scene.ContinueID = "Act_1_5";
             scene.BackID = "Act_1_3";
-            scene.ActID = "Act_1";
             act.AddScene(scene);
+
+            //scene 5a
 
             this.AddAct(act);
 

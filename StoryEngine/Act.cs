@@ -10,6 +10,7 @@ namespace text_adventure.StoryEngine
 
         public void AddScene(Scene scene)
         {
+            scene.ActID = this.ID;
             Scenes.Add(scene);
         }
 

@@ -8,6 +8,10 @@ namespace text_adventure.MansionEngine
         public string Id { get; set; }
         public string Description { get; set; }
         public string FloorId { get; set; }
+        public bool CanInspect { get; set; }
+        public bool CanOpen { get; set; }
+        public bool CanLeave { get; set; }
+        
         
         public List<Playerchoice> PlayerChoices { get; set; } = new List<Playerchoice>();
 

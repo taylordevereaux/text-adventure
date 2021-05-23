@@ -13,7 +13,9 @@ namespace text_adventure
     {
         public static void Main(string[] args)
         {
-            CreateHostBuilder(args).Build().Run();
+            // CreateHostBuilder(args).Build().Run(); // temp disabled to test through console.
+            var newGame = new LocationEngine.Location();
+
         }
 
         public static IHostBuilder CreateHostBuilder(string[] args) =>

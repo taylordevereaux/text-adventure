@@ -1,4 +1,4 @@
-namespace text_adventure.MansionEngine
+namespace text_adventure.LocationEngine
 {
     public class Item
     {
